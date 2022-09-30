@@ -11,8 +11,9 @@
     <AssemblyName>Locadora</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -110,6 +111,12 @@
     <Compile Include="DTO\GeneroDTO.vb" />
     <Compile Include="DTO\LocacaoDTO.vb" />
     <Compile Include="DTO\MidiasDTO.vb" />
+    <Compile Include="Formularios\CrystalReport1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Formularios\FrmCadCliente.Designer.vb">
       <DependentUpon>FrmCadCliente.vb</DependentUpon>
     </Compile>
@@ -187,6 +194,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Formularios\CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmCadCliente.resx">
       <DependentUpon>FrmCadCliente.vb</DependentUpon>
     </EmbeddedResource>
